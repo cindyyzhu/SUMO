@@ -1,4 +1,4 @@
-// Motor A Connections, the number is the number on the arduino board and it is dependent on wiring
+// Motor A Connections
 int in1 = 4;
 int in2 = 5;
 
@@ -8,6 +8,8 @@ int in4 = 7;
 
 // Infrared sensor
 const int IR = 3;
+
+// All numbers above are the numbers on the arduino board and it is dependent on wiring
 
 // Motor Forward Function
 void motor_forward(){

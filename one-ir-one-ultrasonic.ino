@@ -17,7 +17,7 @@ const int ECHO_PIN = 12;
 // If yours outputs HIGH on detection, change this to false.
 const bool IR_ACTIVE_LOW = true;
 
-// Ultrasonic detection range in cm (tune for your ring size)
+// Ultrasonic detection range in cm 
 const int DETECT_DISTANCE_CM = 40;
 
 // Motor Forward Function

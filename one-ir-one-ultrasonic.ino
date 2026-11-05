@@ -8,12 +8,10 @@ int in4 = 7;
 
 // Infrared sensor (digital output)
 const int IR = 3;
-// IF YOU HAVE TWO IR SENSORS THE SECOND ONE GOES TO: OUT -> 2
 
 // Ultrasonic sensor 
 const int TRIG_PIN = 11;
 const int ECHO_PIN = 12;
-// IF YOU HAVE TWO ULTRASONIC SENSORS THE SECOND ONE GOES TO: TRIG -> 9; ECHO -> 10
 
 // Most IR obstacle modules output LOW when they detect something.
 // If yours outputs HIGH on detection, change this to false.

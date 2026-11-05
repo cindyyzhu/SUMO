@@ -1,0 +1,63 @@
+// Motor A Connections
+int in1 = 4;
+int in2 = 5;
+
+// Motor B Connections
+int in3 = 6;
+int in4 = 7;
+
+// Infrared sensor
+const int IR = 3;
+
+// Motor Forward Function
+void motor_forward(){
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+}
+
+// Motor Stop Function
+void motor_stop(){
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+// Motor right Function
+void motor_right(){
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+// Motor backwards Function
+void motor_backward(){
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+}
+ 
+void setup() {
+  // Set all the motor control pins to outputs
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+  pinMode(IR, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  motor_right();
+  delay(100);
+  int sensor_state = digitalRead(IR);
+  if(sensor_state == LOW){
+    motor_forward();
+  }
+  delay(100);
+}

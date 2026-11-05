@@ -1,4 +1,4 @@
-// Motor A Connections
+// Motor A Connections, the number is the number on the arduino board and it is dependent on wiring
 int in1 = 4;
 int in2 = 5;
 
